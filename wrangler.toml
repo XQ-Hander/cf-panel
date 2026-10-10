@@ -1,0 +1,18 @@
+name = "cf-panel"
+main = "worker.js"
+compatibility_date = "2024-11-01"
+
+# ---------- 环境变量（部署前按需修改） ----------
+[vars]
+# 必填：你的 UUID（面板路径与订阅鉴权都用它），可用 https://1024tools.com/uuid 生成
+UUID = "00000000-0000-0000-0000-000000000000"
+# 可选：反代 IP/域名（直连出站备用），留空则不启用
+# PROXYIP = "proxyip.example.com"
+# 可选：优选 IP/域名，逗号分隔，格式 host:port#备注（面板+KV 会覆盖这里）
+# PREFERRED = "icook.hk:443#香港优选,cloudflare.182682.xyz:443#优选域名"
+
+# ---------- KV（可选，绑定后面板可在线改优选列表） ----------
+# 先在 Dashboard → Workers & Pages → KV 创建命名空间，把 id 填到下面后取消注释
+# [[kv_namespaces]]
+# binding = "PANEL_KV"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
